@@ -18,14 +18,7 @@ export default function MyCard() {
 
   return (
     <Card
-      className="
-      bg-linear-to-br from-[#0f0f1a] to-[#111827]
-      w-full
-      p-4 sm:p-6
-      min-h-45
-      flex flex-col justify-between
-      transition hover:shadow-md
-    "
+      className="bg-linear-to-br from-[#0f0f1a] to-[#111827] w-full p-4 sm:p-6 min-h-45 flex flex-col justify-between transition hover:shadow-md"
     >
       {/* Top Section */}
       <Card.Header className="gap-4">
