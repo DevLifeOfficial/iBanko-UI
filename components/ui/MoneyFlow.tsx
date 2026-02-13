@@ -11,6 +11,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+import Card from "./Card";
 
 export default function MoneyFlow() {
   const data = [
@@ -39,32 +40,32 @@ export default function MoneyFlow() {
   };
 
   return (
-    <div className="w-full mt-5 h-80 flex flex-col justify-between font-sans">
-      <div className="flex items-center justify-between gap-2">
+    <Card className="w-full mt-5 h-80 flex flex-col justify-between font-sans">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 mb-3">
         <div className="text-black text-2xl font-bold">Money Flow</div>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-row items-center gap-6">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-green-600 rounded-full"></div>
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-[10px] sm:text-sm text-gray-500 font-medium">
               Total Saving
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 bg-orange-600 rounded-full"></div>
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-[10px] sm:text-sm text-gray-500 font-medium">
               Total Expense
             </span>
           </div>
         </div>
 
-        <button className="flex items-center gap-2 px-4 py-1.5 text-sm font-medium  border border-gray-300 rounded-full  text-gray-700  hover:bg-gray-200 transition">
+        <button className="flex items-center gap-2 px-4 py-1.5 text-xs sm:text-sm font-medium  border border-gray-300 rounded-full  text-gray-700  hover:bg-gray-200 transition">
           Weekly
           <ChevronDown className="w-4 h-4 mt-1 text-bold" />
         </button>
       </div>
 
-      <div className="w-full h-60">
+      <Card.Body className="w-full h-60">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
             <CartesianGrid
@@ -125,7 +126,7 @@ export default function MoneyFlow() {
             />
           </LineChart>
         </ResponsiveContainer>
-      </div>
-    </div>
+      </Card.Body>
+    </Card>
   );
 }

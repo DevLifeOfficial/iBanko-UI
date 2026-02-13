@@ -35,7 +35,7 @@ export default function Navbar() {
 
       {/* Choose Account */}
       <div className="relative hidden lg:block">
-        <button
+        <div
           title="Choose Account"
           onClick={() => setOpen(!open)}
           className="w-60 hidden lg:flex align-items-center justify-between ml-4 px-3 py-2 bg-gray-100 text-sm text-gray-400 font-semibold rounded-full hover:bg-gray-200 transition"
@@ -60,7 +60,7 @@ export default function Navbar() {
               ))}
             </div>
           )}
-        </button>
+        </div>
       </div>
 
       {/* Tools */}

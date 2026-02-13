@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, Paperclip } from "lucide-react";
+import Card from "./Card";
 
 type Transaction = {
   id: number;
@@ -51,9 +52,9 @@ const transactions: Transaction[] = [
 
 export default function Transactions() {
   return (
-    <div className=" w-full font-sans p-3 lg:p-6">
+    <Card className=" w-full p-3 lg:p-6">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-2 ">
         <h2 className="text-2xl font-bold text-black">Transactions</h2>
 
         <button className="flex items-center gap-2 px-4 py-1.5 border border-gray-300 text-sm font-medium rounded-full text-gray-700 hover:bg-gray-200 transition">
@@ -63,7 +64,7 @@ export default function Transactions() {
       </div>
 
       {/* Transactions List */}
-      <div className="space-y-5  h-100 py-6 rounded-lg">
+      <Card.Body className="space-y-5 h-100 py-6 rounded-lg">
         {transactions.map((tx) => (
           <div key={tx.id} className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -91,7 +92,7 @@ export default function Transactions() {
             </p>
           </div>
         ))}
-      </div>
-    </div>
+      </Card.Body>
+    </Card>
   );
 }

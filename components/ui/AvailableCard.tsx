@@ -1,23 +1,24 @@
 "use client"
 
 import Image from "next/image"
+import Card from "./Card"
 
 export default function AvailableCard() {
   return (
-    <div className="w-full bg-white rounded-2xl mt-4 h-100 border-t p-6 border-gray-300">
+    <Card className="w-full bg-white rounded-2xl mt-4 h-100 border-t p-4 border-gray-300 font-sans">
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-5">
-        <h2 className="text-lg font-semibold text-gray-900">
+      <Card.Header className="flex items-center justify-between mb-5">
+        <h2 className="text-2xl font-bold text-black">
           Available Card
         </h2>
 
         <button className="text-sm text-gray-500 font-medium hover:text-black transition">
           View all
         </button>
-      </div>
+      </Card.Header>
 
-      <div className="space-y-4">
+      <Card.Body className="space-y-4">
         {/* Card 1 */}
         <div className="bg-[#EAF0F3] rounded-2xl p-5 flex flex-col gap-4">
 
@@ -88,7 +89,7 @@ export default function AvailableCard() {
           </div>
 
         </div>
-      </div>
-    </div>
+      </Card.Body>
+    </Card>
   )
 }
