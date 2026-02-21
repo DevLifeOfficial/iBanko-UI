@@ -12,7 +12,7 @@ export default function Card({ children, className } : CardProps) {
   return (
     <div className={clsx(
         "rounded-2xl font-sans",
-        className
+        className,
     )}>
       {children}
     </div>
